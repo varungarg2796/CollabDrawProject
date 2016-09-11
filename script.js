@@ -103,15 +103,13 @@ function draw(event){
 
 		setInterval(function(){
 
-			$(document).on('keydown', function (e) {
-        var key = e.keyCode;
-        if (key === 32){
+			$(document).on('mousedown', function (e) {
 
 		 canvas.addEventListener('mousemove',eraser);
-        }
+        
     });
 
-    $(document).on('keyup', function (e) {
+    $(document).on('mouseup', function (e) {
         var key = e.keyCode;
         if (key === 32) {
         	canvas.removeEventListener("mousemove", eraser);
@@ -120,7 +118,7 @@ function draw(event){
         	}
     	});
 			
-		},50)
+		},50);
 
 	}
 }
